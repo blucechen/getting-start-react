@@ -112,14 +112,14 @@ app.get("/getMovieList", (req, res, next)=>{
 
 app.get('/getCity.json', (req, res, next)=>{
 	let timer = setTimeout(()=>{
-		res.sendFile(__dirname + '/getCity.json');
+		res.sendFile(__dirname + '/src/data/getCity.json');
 		clearTimeout(timer);
 	}, 2000);
 })
 app.get('/getFunc.json', (req, res, next)=>{
 	
 	let timer = setTimeout(()=>{
-		res.sendFile(__dirname + '/getFunc.json')
+		res.sendFile(__dirname + '/src/data/getFunc.json')
 		clearTimeout(timer);
 	}, 2000);
 })
