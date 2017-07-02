@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script>
+	obj1 = {name:'obj1', age:12};
+	obj2 = {name:'boj2', age:13};
+	obj3 = {name:'obj3', age:14};
+	obj4 = {name:'obj4', age:15};
+	console.log(window['obj1']);
+
+	var obj5 = {};		
+	for (var i = 4 ; i > 0; i--) {
+		obj5[i + ""] = window['obj' + i].name;
+	}
+	console.log(obj5);
+
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+<script>
+	let arr = [1,2,3]
+	let obj = {
+		0: "a",
+		1: "b",
+		2: "c",
+		length: 3
+	}
+
+
+	var log = (a,...value) => {
+		// console.log(arguments);//箭头函数没有arguments对象的
+		// console.log(Object.prototype.toString.call(item));
+		// 使用rest参数也是不靠谱的(...value)=>{如果调用的是apply(window, arr)不是一一传进来的}
+		console.log(a, value);
+	}
+
+	log.apply(window, obj);
+
+
+</script>
+
+
+</body>
+</html>

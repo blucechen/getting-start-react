@@ -1,0 +1,76 @@
+body,div,span,header,footer,nav,section,aside,article,ul, li, a, p, h1, h2, h3, h4,h5, i, b, textarea, button, input, select  {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    font-family: 'Microsoft YaHei';
+    -webkit-tap-highlight-color:transparent;
+    &:focus {
+        outline: none;
+    }
+}
+
+// 铺满高度
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    height: 100%;
+    >:nth-child(1) {
+        height: 100%;
+    }
+}
+html {
+    // min-width: 380px;
+}
+
+
+/* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 768px) {
+    body{
+        /*为什么要加important那？因为用了第三方的antd的样式库，antd的body里面设置的字体样式优先级比我们的高*/
+        font-family: '微软雅黑' !important;
+        /*font-family: '宋体' !important;*/
+        font-size: 16px !important;
+
+    }
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    body{
+        font-family: '微软雅黑' !important;
+        /*font-family: '宋体' !important;*/
+        font-size: 18px !important;
+
+    }
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    body{
+        /*font-family: '微软雅黑' !important;*/
+        font-family: '宋体' !important;
+        font-size: 20px !important;
+
+    }
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media screen and (min-width: 1201px) {
+    body{
+        /*font-family: '微软雅黑' !important;*/
+        font-family: '宋体' !important;
+        font-size: 24px !important;
+
+    }
+}
+
+
+
+

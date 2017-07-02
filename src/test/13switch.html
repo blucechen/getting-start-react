@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+<script>
+	function test(type){
+		switch(type) {
+			case 'A': 
+				console.log("A");
+				return "a";
+				// break;
+			case 'B':
+				console.log("B");
+				return "b";
+				// break;
+			default: 
+				console.log('default');
+				return "default";
+		}
+	}
+
+	let res = test("C")
+	console.log(res);
+</script>
+
+
+</body>
+</html>

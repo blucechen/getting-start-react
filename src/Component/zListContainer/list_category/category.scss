@@ -1,0 +1,36 @@
+:local(.category) {
+	position: fixed;
+	top:8%;
+	left:0%;	
+	height: 84%;
+	background-color: #43abcd;
+	width: 30%;
+	overflow: hidden;
+	transition: all .5s ease;
+	&.toLeft {
+		transform: translateX(-101%);
+	}
+	>ul{
+		>li {
+			padding: 20px 0;
+			>a {
+				color: black;
+				padding: 15px;
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

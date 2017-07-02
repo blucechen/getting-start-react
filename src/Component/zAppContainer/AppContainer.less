@@ -1,0 +1,50 @@
+/* :local(.titlee) {
+	// color: red;
+}
+:local(.titlee .content) {
+	font-size: 80px;
+}
+:local(.titlee h2) {
+	font-weight: bolder;
+	color: blue;
+} */
+
+:local(.app-container) {
+	display: flex;
+	flex-direction: column;/*总体的布局*/
+	width: 100%;
+	height: 100%;
+
+
+	/*下面是具体的每个伸缩容器的布局了*/
+	.content {
+		flex-grow: 1;//都可以伸缩， 如果空间有剩余的话
+		height: 84%
+	}
+	.header {
+		flex: 0 0 8%;
+		height: 7%;
+		background-color: rgb(0, 138, 211);
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		a {
+			// color: black;
+			flex: 1;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.footer {//居中怎么办
+		height: 8%;
+		background-color: rgb(0, 138, 211);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+}
+

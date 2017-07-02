@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+<script>
+	/*function c() {
+		console.trace();
+		console.log("c");
+	}
+	function b() {
+		console.trace();
+		return c();
+	}
+	function a(){
+		console.trace();
+		return b();
+	}
+	a();*/
+
+</script>
+	
+
+<script>
+	function fTail(n, a, b) { 
+		"use strict";//好像在此环境中也没有开启尾递归优化
+		if (n === 0) {return a}
+		// console.trace();
+		return fTail(n - 1, b, a + b)//此种写法并一个好处就是其没有重复的进行了计算，但是调用帧还是保存了下来
+	}
+
+	function tailCall(n){
+		return fTail(n + 1, 0, 1);
+	}
+	
+	/*for (var i = 1000; i >= 0; i--) {
+		console.log(tailCall(i));
+	}*/
+		console.log(tailCall(100));
+
+
+	/*function f(n) {
+		if (n === 0 || n === 1) return n 
+		else return f(n - 1) + f(n - 2)
+	}
+
+	for (var i = 25; i >= 0; i--) {
+		console.log(f(i + 1));
+	}*/
+
+
+/*
+	function sum(x, y) {
+		"use strict";
+	    if (y <= 0) {
+	    	console.trace();
+	      	return x;
+	    }
+	    return sum(x + 1, y - 1);
+	}*/
+
+	/*function sum(x, y) {
+	    	"use strict";
+	    function recur(a, b) {
+	    	"use strict";
+	        if (b <= 0) {
+	            return a;
+	        } else {
+	            return recur(a + 1, b - 1);
+	        }
+	    }
+	    return recur(x, y);
+	}*/
+	// sum(1, 10)
+	// console.trace(sum(1, 10000));
+	// 
+	function sum(x, y) {
+		
+	    	console.trace();
+	    // return sum(x + 1, y - 1);
+	}
+
+	console.log(sum(1, 10));
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+$searchHeight: 2.0rem;
+:local(.search) {
+	display: flex;
+	justify-content: center;
+	padding: 1.0rem;
+		input[type=text] {
+			height: $searchHeight;
+			box-sizing: border-box;
+			border: 1px solid #666;
+			outline: none;
+		}
+		input[type=button] {
+			height: $searchHeight;
+			width: 2 * $searchHeight;
+			background-color: #ff649b;
+		}
+
+
+}
